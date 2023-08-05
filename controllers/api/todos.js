@@ -34,7 +34,7 @@ async function create(req,res,next){
 }
 /******* R - READ *******/
 
-async function indexCompleted(req,res){
+async function indexCompleted(req,res,next){
     try {
         const todos = await Todo.find({compeleted:true})
         res.locals.data.todos = todos

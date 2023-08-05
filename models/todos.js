@@ -3,7 +3,7 @@ const { compile } = require('sass')
 
 const todoSchema = new Schema({
     title:{type:String, required:true},
-    compeleted:{type:Boolean, required:true}
+    completed:{type:Boolean, required:true}
 },{
     timestamps:true
 })

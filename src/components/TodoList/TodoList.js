@@ -1,4 +1,4 @@
-import styles from './TodoList.module.scss'
+import  './TodoList.module.scss'
 import Todo from '../Todo/Todo'
 
 export default function TodoList ({ 
@@ -11,9 +11,9 @@ export default function TodoList ({
     deleteTodo
 }){
     return(
-        <div className={styles.todolist}>
+        <div className={'todolist'}>
             Add New Todo:<input 
-            className={styles.input}
+            className={'input'}
             type="text" 
             value={newTodo.title} 
             onChange={(e) => {

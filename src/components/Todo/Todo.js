@@ -2,8 +2,8 @@ import styles from './Todo.module.scss'
 
 export default function Todo({todo,buttonAction,buttonText}){
     return(
-        <div className={styles.todo}>{todo.title}
-        <button className={styles.button} 
+        <div className={'todo'}>{todo.title}
+        <button className={'button'} 
         onClick={()=>buttonAction(todo._id)}>
             {buttonText}
             </button>
