@@ -8,6 +8,6 @@ const todoSchema = new Schema({
     timestamps:true
 })
 
-const Todo = mode;('Todo', todoSchema)
+const Todo = model('Todo', todoSchema)
 
 module.exports = Todo
