@@ -3,7 +3,7 @@ const app = express()
 
 const path = require('path')
 
-const favicon = require('serve-favicon') // shows emojis
+const favicon = require('serve-favicon') // shows emojis in the browser tab
 
 const logger = require('morgan')
 
@@ -15,7 +15,7 @@ app.use((req,res,next) => {
 })
 
 app.use(logger('dev'))
-app.use(favicon(path.join(__dirname, 'build', 'favicon.ico')))
+app.use(favicon(path.join(__dirname, 'public','img', 'logo.png')))
 app.use(express.static(path.join(__dirname, 'public')))
 app.use('api/todos', require('./routes/api/todos'))
 
