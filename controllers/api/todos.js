@@ -36,7 +36,7 @@ async function create(req,res,next){
 
 async function indexCompleted(req,res){
     try {
-        const todos = Todo.find({compeleted:true})
+        const todos = await Todo.find({compeleted:true})
         res.locals.data.todos = todos
         next()
     } catch (error) {
@@ -47,7 +47,7 @@ async function indexCompleted(req,res){
 
 async function indexNotCompleted(req,res,next){
     try {
-        const todos = Todo.find({compeleted:false})
+        const todos = await Todo.find({compeleted:false})
         res.locals.data.todos = todos
         next()
     } catch (error) {
@@ -58,7 +58,7 @@ async function indexNotCompleted(req,res,next){
 
 async function show (req,res,next){
     try {
-        const todo =await  Todo.findOne({_id:req.params.id})
+        const todo = await Todo.findOne({_id:req.params.id})
         res.locals.data.todo = todo
         next()
     } catch (error) {
