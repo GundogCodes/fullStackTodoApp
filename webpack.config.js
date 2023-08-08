@@ -1,3 +1,5 @@
+webpack.config.js
+Solution removing MiniCSSExtractPlugin From SCSS Pipeline and Setting Modules to true on CSS Loader
 const path = require('path');
 const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin');
@@ -33,8 +35,12 @@ module.exports = env => {
 					test: /\.scss$/,
 					use: [
 						'style-loader',
-						MiniCssExtractPlugin.loader,
-						'css-loader',
+						{
+							loader: "css-loader",
+							options: {
+								modules: true,
+							},
+						},
 						'sass-loader',
 						'postcss-loader'
 					]
