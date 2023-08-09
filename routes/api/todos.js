@@ -13,7 +13,7 @@ router.get('/completed', todoCtrl.indexCompleted, todoCtrl.jsonTodo)
 
 //  Delete
 
-router.delete('/:id', todoCtrl.destory, todoCtrl.jsonTodo)
+router.delete('/:id', todoCtrl.destroy, todoCtrl.jsonTodo)
 
 // Update
 

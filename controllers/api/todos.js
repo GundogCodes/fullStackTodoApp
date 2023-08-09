@@ -7,7 +7,7 @@ module.exports = { // could also write it the traditional way we have been writi
     indexNotCompleted,
     show,
     update,
-    destory,
+    destroy,
     jsonTodos,
     jsonTodo
 }
@@ -82,7 +82,7 @@ async function update (req,res,next){
 
 /******* D - DELETE  *******/
 
-async function destory (req,res,next){
+async function destroy (req,res,next){
     try {
         const todo = await Todo.findOneAndDelete({_id:req.params.id})
         res.locals.data.todo = todo 
