@@ -1,5 +1,4 @@
-webpack.config.js
-Solution removing MiniCSSExtractPlugin From SCSS Pipeline and Setting Modules to true on CSS Loader
+
 const path = require('path');
 const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin');
